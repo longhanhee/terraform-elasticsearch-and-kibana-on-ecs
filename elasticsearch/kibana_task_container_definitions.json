@@ -1,0 +1,24 @@
+[
+  {
+    "name": "kibana-test",
+    "image": "docker.elastic.co/kibana/kibana:6.4.3",
+    "cpu": 0,
+    "memoryReservation": 1024,
+    "portMappings": [
+      {
+        "containerPort": 5601,
+        "hostPort": 5601,
+        "protocol": "tcp"
+      }
+    ],
+    "essential": true,
+    "environment": [
+      {
+        "name": "ELASTICSEARCH_URL",
+        "value": "http://localhost:9200/"
+      }
+    ],
+    "mountPoints": [],
+    "volumesFrom": []
+  }
+]
